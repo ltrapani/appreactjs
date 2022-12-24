@@ -1,13 +1,63 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  background-color: yellowgreen;
+} 
+
+header, footer{
+  background-color: slateblue;
+}
+
+.navbar a {
+  color: white;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+.icon-img{
+  width: 70px;
+  padding-right: 10px;
+}
+
+.btn{
+  padding: 5px;
+  margin: 10px;
+}
+
+.icon-img{
+  margin-right: 15px;
+  margin-left: 0px;
+}
+
+.me-auto{
+  font-family: 'Russo One', sans-serif;
+  font-size: 40px;
+}
+
+.navbar-links{
+  font-family: 'Russo One', sans-serif;
+}
+
+.numProd{
+  color: white;
+  margin-left: 7px;
+}
+
+.itemNumProd{
+  background: red;
+  border-radius: 100%;
+  width: 26px;
+  height:26px;
 }
