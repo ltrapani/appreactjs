@@ -10,11 +10,11 @@ html, body, #root {
 }
 
 #root{
-  background-color: yellowgreen;
+  background-color: rgba(255, 255, 255, 0.66);
 } 
 
 header, footer{
-  background-color: slateblue;
+  background-color: rgb(103, 88, 203);
 }
 
 .navbar a {
@@ -24,6 +24,16 @@ header, footer{
 footer a{
   color: white;
   text-decoration: none;
+}
+
+footer{
+  background-color: rgba(48, 38, 102, 0.908);
+  color: aliceblue;
+  padding: 1rem 0.5 rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 .icon-img{
@@ -52,12 +62,24 @@ footer a{
 
 .numProd{
   color: white;
-  margin-left: 7px;
+  margin-left: 6px;
 }
 
 .itemNumProd{
-  background: red;
-  border-radius: 100%;
-  width: 26px;
-  height:26px;
+    background-color: rgba(255, 1, 1, 0.698);
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+    border-radius: 100%;
+    position: relative;
+    left: 21px;
+    top: -10px;
+}
+
+.iconcart{
+  font-size: 30px;
+}
+
+.nav-link{
+  padding: 0px;
 }

@@ -4,7 +4,7 @@ import ItemListContainer from "./ItemListContainer";
 const CartWidget = () => {
 return(
         <>
-            <AiOutlineShoppingCart className="icon-shop"/>
+            <AiOutlineShoppingCart className="icon-shop iconcart"/>
             <ItemListContainer/>
         </>
     )

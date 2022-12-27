@@ -26,7 +26,7 @@ const ItemListContainer = (props) => {
         return(
             <>
                 <div className="itemNumProd">
-                    <p className="numProd">3</p>
+                    <span className="numProd">3</span>
                 </div>
             </>
         )
