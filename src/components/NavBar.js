@@ -13,7 +13,7 @@ function NavBar (props) {
         return (
                 <Navbar className='navbar'>
                     <Container>
-                    <img src='./icon.png'alt='iconimage' className='icon-img'></img>
+                    <img src="./img/icon.png" alt='iconimage' className='icon-img'></img>
                     <Navbar.Brand className='me-auto' href="#home">MundoGamer</Navbar.Brand>
                     <Nav className='navbar-links'>
                         <Nav.Link href="#home">Home</Nav.Link>

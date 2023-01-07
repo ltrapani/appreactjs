@@ -83,3 +83,28 @@ footer{
 .nav-link{
   padding: 0px;
 }
+
+.btn-agregaralcarrito{
+  padding: 5px;
+  background-color: rgb(228, 228, 228);
+}
+
+.bodyCard{
+  padding: 10px;
+}
+
+.card{
+  width: 350px;
+  height: auto;
+  margin: 20px;
+  padding: 15px;
+}
+
+.cardPrice{
+  color: gray;
+  font-size: 18px;
+}
+
+.cardTittle{
+  font-size: 30px;
+}
