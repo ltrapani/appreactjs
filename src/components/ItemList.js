@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import Product from './Product'
+import Item from './Item'
 
-const Products = () => {
+const ItemList = () => {
 
-    const [products, setProducts] = useState([
+    const [ItemList, setItemList] = useState([
         {
             id:1,
             nombre:"Microfono HyperX QuadCast",
@@ -50,17 +50,17 @@ const Products = () => {
 
     return (
         <div className='row'>
-            {products.map(product => {
-                return <Product 
+            {ItemList.map(product => {
+                return <Item 
                 key={product.id} 
                 nombre={product.nombre} 
                 img={product.img} 
                 precio={product.precio}
                 descripcion={product.descripcion}>
-                </Product>
+                </Item>
             })}
         </div>
     )
 }
 
-export default Products
+export default ItemList
