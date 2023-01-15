@@ -1,110 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
+
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body, #root {
-  height: 100%;
-}
-
-#root{
-  background-color: rgba(255, 255, 255, 0.66);
-} 
-
-header, footer{
-  background-color: rgb(103, 88, 203);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar a {
-  color: white;
-}
-
-footer a{
-  color: white;
-  text-decoration: none;
-}
-
-footer{
-  background-color: rgba(48, 38, 102, 0.908);
-  color: aliceblue;
-  padding: 1rem 0.5 rem;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-.icon-img{
-  width: 70px;
-  padding-right: 10px;
-}
-
-.btn{
-  padding: 5px;
-  margin: 10px;
-}
-
-.icon-img{
-  margin-right: 15px;
-  margin-left: 0px;
-}
-
-.me-auto{
-  font-family: 'Russo One', sans-serif;
-  font-size: 40px;
-}
-
-.navbar-links{
-  font-family: 'Russo One', sans-serif;
-}
-
-.numProd{
-  color: white;
-  margin-left: 6px;
-}
-
-.itemNumProd{
-    background-color: rgba(255, 1, 1, 0.698);
-    width: 20px;
-    height: 20px;
-    font-size: 0.9rem;
-    border-radius: 100%;
-    position: relative;
-    left: 21px;
-    top: -10px;
-}
-
-.iconcart{
-  font-size: 30px;
-}
-
-.nav-link{
-  padding: 0px;
-}
-
-.btn-agregaralcarrito{
-  padding: 5px;
-  background-color: rgb(228, 228, 228);
-}
-
-.bodyCard{
-  padding: 10px;
-}
-
-.card{
-  width: 350px;
-  height: auto;
-  margin: 20px;
-  padding: 15px;
-}
-
-.cardPrice{
-  color: gray;
-  font-size: 18px;
-}
-
-.cardTittle{
-  font-size: 30px;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

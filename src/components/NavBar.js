@@ -1,36 +1,33 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import CartWidget from './CartWidget';
+import { Link } from "react-router-dom"
+import CartWidget from "./CartWidget"
+import logoMundoGamer from "../components/img/icon.png"
 
-
-function NavBar (props) {
-    
-    const { isHeader, textLinkFooter, hrefLinkFooter } = props
-
-    if(isHeader){
-
-        return (
-                <Navbar className='navbar'>
-                    <Container>
-                    <img src="./img/icon.png" alt='iconimage' className='icon-img'></img>
-                    <Navbar.Brand className='me-auto' href="#home">MundoGamer</Navbar.Brand>
-                    <Nav className='navbar-links'>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#catalogo">Catalogo</Nav.Link>
-                        <Nav.Link href="#sobrenosotros">Sobre nosotros</Nav.Link>
-                        <Nav.Link><CartWidget/></Nav.Link>
-                    </Nav>
-                    </Container>
-                </Navbar>
-        )
-    }else {
-        return (
-            <nav>
-                <a href={hrefLinkFooter}>{textLinkFooter}</a>
-            </nav>
-        )
-    }
+const NavBar = () => {
+  return (
+    <div className="navbar bg-slate-600">
+      <div>
+        <img className="w-10 rounded-full mr-5" src={logoMundoGamer} />
+      </div>
+      <div className="flex-1">
+        <h1 className=" normal-case text-white text-3xl"> DREAM RIDE</h1>
+      </div>
+      <div className="flex-2">
+        <Link to="/" className="btn btn-ghost  text-white text-xl">INICIO</Link>
+      </div>
+      <div className="flex-">
+        <Link to={`/category/perisfericos`} className="btn btn-ghost normal-case text-white text-xl">PERISFERICOS</Link>
+      </div>
+      <div className="flex-">
+        <Link to={`/category/silla`} className="btn btn-ghost normal-case text-white text-xl">SILLA</Link>
+      </div>
+      <div className="flex-">
+        <Link to={`/category/monitor`} className="btn btn-ghost normal-case text-white text-xl">MONITORES</Link>
+      </div>
+      <div className="flex-none">
+        <CartWidget />
+      </div>
+    </div>
+  )
 }
 
-export default NavBar;
+export default NavBar

@@ -1,39 +1,53 @@
-import { useEffect, useState } from "react"
-import ItemList from "./ItemList"
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { listadoDeProductos } from './data/Articulos'
+import Item from './Item'
+
+
+
 
 const ItemListContainer = () => {
 
-    const [cargar, setCargar] = useState(false)
-    const [productos,setProductos] = useState([])
-
-    useEffect(() => {
 
 
-        const pedido = fetch("https://fakestoreapi.com/products")
+  const [productos, setProductos] = useState([])
 
-        pedido
-            .then((respuesta) => {
-                const productos = respuesta.json()
-                return productos
+  const { idCategory } = useParams()
 
-            })
-            .then((productos) => {
-                setProductos(productos)
-                setCargar(true)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
+  if (idCategory) {
 
-    }, [])
+  } else {
 
-    return (
-        <div>
-            {cargar ? 'Productos Cargados' : 'Cargando...'}
-            <ItemList productos={productos}/>
-        </div>
-    )
+  }
+
+  useEffect(() => {
+    if (idCategory) {
+      getlistadoDeProductos()
+        .then(res => setProductos(res.filter(producto => producto.category === idCategory)))
+        .catch(err => console.log(err))
+    } else {
+      getlistadoDeProductos()
+        .then(res => setProductos(res))
+        .catch(err => console.log(err))
+    }
+
+    return () => setProductos([])
+  }
+    , [idCategory])
+
+  const getlistadoDeProductos = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(listadoDeProductos)
+      }, 100);
+
+    })
+  }
+  return (
+    <div className="grid grid-cols-4 gap-2">
+      {productos.map(i => <Item key={i.id}{...i} />)}
+    </div>
+  )
 }
-
 
 export default ItemListContainer
