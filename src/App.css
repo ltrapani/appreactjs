@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+footer{
+  background-color: rgba(48, 38, 102, 0.908);
+  color: aliceblue;
+  padding: 1rem;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 50px;
+  height: auto;
+}

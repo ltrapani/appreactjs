@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
     <img className="w-64 object-cover rounded-t-md" src={item.img} alt= "No se cargo la imagen" />
     <div className="mt-1">
       <h1 className="text-2xl font-bold text-gray-700">{item.nombre}</h1>
-      <p className="block text-xl font-semibold text-gray-700 cursor-auto">Descripcion del producto: {item.descrpcion}</p>
+      <p className="block text-xl font-semibold text-gray-700 cursor-auto">{item.descripcion}</p>
       <div className="mt-4 mb-2 flex justify-between pl-4 pr-2">
         <p className="block text-xl font-semibold text-gray-700 cursor-auto">${item.precio}</p>
       <Contador stock={item.stock}/>

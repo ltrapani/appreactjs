@@ -44,7 +44,7 @@ const ItemListContainer = () => {
     })
   }
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className="grid grid-cols-4 gap-2 bg-emerald-400">
       {productos.map(i => <Item key={i.id}{...i} />)}
     </div>
   )

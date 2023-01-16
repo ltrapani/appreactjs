@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
-import logoMundoGamer from "../components/img/icon.png"
+import logoMundoGamer from "./img/icon.png"
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-slate-600">
+    <div className="navbar bg-emerald-900">
       <div>
-        <img className="w-10 rounded-full mr-5" src={logoMundoGamer} />
+        <img className="w-20 mr-5" src={logoMundoGamer} alt="logoMundoGamer" />
       </div>
       <div className="flex-1">
         <h1 className=" normal-case text-white text-3xl"> MundoGamer</h1>
