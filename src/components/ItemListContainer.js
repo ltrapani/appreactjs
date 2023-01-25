@@ -4,8 +4,6 @@ import { listadoDeProductos } from './data/Articulos'
 import Item from './Item'
 
 
-
-
 const ItemListContainer = () => {
 
 
