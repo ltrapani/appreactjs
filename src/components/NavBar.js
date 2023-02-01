@@ -9,7 +9,7 @@ const NavBar = () => {
         <img className="w-20 mr-5" src={logoMundoGamer} alt="logoMundoGamer" />
       </div>
       <div className="flex-1">
-        <h1 className=" normal-case text-white text-3xl"> MundoGamer</h1>
+        <h1 className=" normal-case text-white text-3xl tittleMundoGamer"> MundoGamer</h1>
       </div>
       <div className="flex-2">
         <Link to="/" className="btn btn-ghost  text-white text-xl">INICIO</Link>

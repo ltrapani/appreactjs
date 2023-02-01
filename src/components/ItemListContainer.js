@@ -1,51 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { listadoDeProductos } from './data/Articulos'
+import Loader from './Loader'
 import Item from './Item'
+import { getFirestore, collection, getDocs, query, where } from "firebase/firestore"
+
+
 
 
 const ItemListContainer = () => {
 
-
-
-  const [productos, setProductos] = useState([])
-
+  const [items, setItems] = useState([])
   const { idCategory } = useParams()
 
-  if (idCategory) {
-
-  } else {
-
-  }
-
   useEffect(() => {
+    const querydb = getFirestore();//
+    const queryCollection = collection(querydb, "productos");
     if (idCategory) {
-      getlistadoDeProductos()
-        .then(res => setProductos(res.filter(producto => producto.category === idCategory)))
-        .catch(err => console.log(err))
+      const queryFilter = query(queryCollection, where("category", "==", idCategory))
+      getDocs(queryFilter)
+        .then(res => setItems(res.docs.map(item => ({ id: item.id, ...item.data() }))));
     } else {
-      getlistadoDeProductos()
-        .then(res => setProductos(res))
-        .catch(err => console.log(err))
+      getDocs(queryCollection)
+        .then(res => setItems(res.docs.map(item => ({ id: item.id, ...item.data() }))))
     }
 
-    return () => setProductos([])
-  }
-    , [idCategory])
+  }, [idCategory])
 
-  const getlistadoDeProductos = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(listadoDeProductos)
-      }, 100);
 
-    })
-  }
   return (
-    <div className="grid grid-cols-4 gap-2 bg-emerald-400">
-      {productos.map(i => <Item key={i.id}{...i} />)}
+    <div>
+      <div className='mt-12 flex justify-center'>
+        <Loader loading={items.length === 0} />
+      </div>
+      <div className="grid grid-cols-4 gap-2">
+        {items.map(i => <Item key={i.id}{...i} />)}
+      </div>
     </div>
+
   )
 }
-
 export default ItemListContainer

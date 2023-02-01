@@ -16,7 +16,7 @@ const Contador = ({ stock, initial = 1, onAdd }) => {
       <button onClick={substractCounter} className='btn'>-</button>
       <span className='text-xl m-2'>{count}</span>
       <button onClick={addCounter} className='btn'>+</button>
-      <div onClick={() => onAdd(count)} className="btn">AGREGAR AL CARRITO</div>
+      <div onClick={() => onAdd(count)} className="btn margin">AGREGAR AL CARRITO</div>
 
 
     </div>
