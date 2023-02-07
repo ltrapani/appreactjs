@@ -10,7 +10,7 @@ const listadoDeProductos = [
         description:"Con el micrófono HyperX descubrirás una nueva forma de captar y emitir audios. Fiel reflejo de la realidad. Ideal para varias actividades. Te brindará un sonido de calidad y conseguirás la nitidez de las voces.",
     },
     {
-        id:"ZW8zTlawu3LIoI7b9mc9",
+        id:"zBVkNXT5E7FoqVJ4OnD4",
         name:"Monitor Samsung 27 G4",
         category:"monitor",
         price:134.699,
@@ -30,7 +30,7 @@ const listadoDeProductos = [
         description:"Tecnología antighosting Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
     },
     {
-        id:"zBVkNXT5E7FoqVJ4OnD4",
+        id:"ZW8zTlawu3LIoI7b9mc9",
         name:"Logitech G Series Lightsync G203",
         category:"perisfericos",
         stock:1,
@@ -58,16 +58,6 @@ const listadoDeProductos = [
         quantity: "",
         picture:"https://http2.mlstatic.com/D_NQ_NP_639691-MLA52252478145_112022-O.webp",
         description:"Confort óptimo, respaldo amplio con logo bordado, soporte lumbar, base de 5 radios con ruedas. Tejido y ecopiel. Fácil de limpiar. Capacidad 120 kg. Diseño exclusivo, cojín reposacabeza, práctico y configurable, respaldo reclinable y asiento regulable de 43 a 53 cm",
-    },
-    {
-        id:"6gRctmHhjHbgZICx9EHX",
-        name:"Gigabyte G24F 2 LCD 23.8",
-        category:"monitor",
-        price:103.999,
-        stock:8,
-        quantity: "",
-        picture:"https://http2.mlstatic.com/D_NQ_NP_763634-MLA51899819959_102022-O.webp",
-        description:" Disfrutá de todas las cualidades que el monitor Gigabyte G24F 2 tiene para ofrecerte. Percibí las imágenes de una manera completamente diferente y complementá cualquier espacio ya sea en tu casa u oficina.",
     },
     {
         id:"Hrs5hIjZcQjgJVppXcjR",

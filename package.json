@@ -13,8 +13,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
-    "sweetalert": "^2.1.2",
-    "web-vitals": "^2.1.4"
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

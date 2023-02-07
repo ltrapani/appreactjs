@@ -9,14 +9,10 @@ const ItemDetail = () => {
 
   const { addnewProduct } = useCartContext(Contexto)
 
-
-
   const onAdd = (quantity) => {
     const newProduct = { ...item, quantity }
     addnewProduct(newProduct)
   }
-
-
 
   const [item, setItem] = useState({})
   const { id } = useParams()
@@ -47,7 +43,7 @@ const ItemDetail = () => {
           <p className="block text-xl font-semibold text-gray-700 cursor-auto">Descripcion del producto: {item.description}</p>
           <div className="mt-4 mb-2 flex justify-between pl-4 pr-2">
             <p className="block text-xl font-semibold text-gray-700 cursor-auto">${item.price}</p>
-            <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
             <Link to={`/`} className="btn margin">VOLVER</Link>
           </div>
         </div>
